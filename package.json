@@ -8,8 +8,8 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "react-dev": "webpack -d --watch",
-    "start": "node database/faker.js && node server/index.js",
+    "react-dev": "webpack -d --watch --mode production --config ./webpack.config.js",
+    "start": "nodemon server/index.js",
     "create-database": "mysql -u root < database/schema.sql",
     "seed-database": "node database/faker.js",
     "test": "jest --coverage"
@@ -35,6 +35,8 @@
     "babel-eslint": "^8.2.6",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "brotli-gzip-webpack-plugin": "^0.5.0",
+    "brotli-webpack-plugin": "^1.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^4.19.1",

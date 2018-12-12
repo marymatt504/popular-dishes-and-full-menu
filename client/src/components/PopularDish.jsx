@@ -82,38 +82,18 @@ class PopularDish extends React.Component {
   }
 
   getPhotoData() {
-    axios.get(`http://18.188.31.198/menus/${this.props.restaurantName}/dishes/${this.props.dish.id}/photos`)
+    // axios.get(`http://18.188.31.198/menus/${this.props.restaurantName}/dishes/${this.props.dish.id}/photos`)
+    axios.get(`http://localhost:2000/menus/${this.props.restaurantName}/dishes/${this.props.dish.id}/photos`)
       .then(data => {
         this.setState({ numberOfPhotos: data.data.length });
-        return axios.get(`http://18.188.31.198/photos/${data.data[0].photos_id}`)
+        // return axios.get(`http://18.188.31.198/photos/${data.data[0].photos_id}`)
+        return axios.get(`http://localhost:2000/photos/${data.data[0].photos_id}`)
           .then(photoData => {
             this.setState({ imgurl: photoData.data[0].url });
           });
 
       });
   }
-
-  // REFACTORED FROM USING AJAX..
-  // $.ajax(`/menus/${this.props.restaurantName}/dishes/${this.props.dish.id}/photos`, {
-  //   method: 'GET',
-  //   success: (data) => {
-  //     // console.log('data>>>>', data);
-  //     this.setState({ numberOfPhotos: data.length });
-  //     // console.log('photos_id from first record>>>,', data[0].photos_id);
-  //     $.ajax(`/photos/${data[0].photos_id}`, {
-  //       success: (photoData) => {
-  //         // console.log('photoData>>>', photoData);
-  //         this.setState({ imgurl: photoData[0].url, impgCaption: photoData[0].caption });
-  //       },
-  //       error: () => {
-  //         console.log('error from second ajax');
-  //       }
-  //     });
-  //   },
-  //   error: () => {
-  //     console.log('error from getPhotoData 1st ajax request');
-  //   }
-  // });
 
   componentDidMount() {
     this.getPhotoData();
