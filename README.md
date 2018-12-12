@@ -2,6 +2,10 @@
 
 > Module displays carousel of top 10 most popular dishes for the given restaurant with image and stats like price and number of reviews from users that mention the dish. Clicking on the Full Menu displays the Full Menu of all dishes for the restaurant. 
 
+![populardishesandfullmenucarousel](https://user-images.githubusercontent.com/29344313/49840351-ddd54300-fd67-11e8-928b-aac43f897c9e.png)
+![populardishesandfullmenumodal](https://user-images.githubusercontent.com/29344313/49840349-dd3cac80-fd67-11e8-8615-44ffa9e5d74a.png)
+See demo at https://youtu.be/E7p8BuHpOmo
+
 ## Related Projects
   - https://github.com/YumpSF/reservation-hours
   - https://github.com/YumpSF/Recommended-Reviews-Module
@@ -12,7 +16,7 @@
 2. [Requirements](#requirements)
 3. [Development](#development)
 
-## Setup
+## To Setup & Run Locally
  - npm install
  - npm run react-dev to run webpack
  - npm start to run server
@@ -23,7 +27,7 @@
  - if prefer to call App with restaurantName, can uncomment line 97 in App.jsx and pass down restaurantName as prop in index.jsx
 
 ## Requirements
-- Node 6.13.0 and additional requirements in package.json file -- to be installed with npm install 
+- Node 6.13.0 
 - mySql database 
 
 ### Installing Dependencies
