@@ -95,6 +95,10 @@ class MenuItem extends React.Component {
       priceWithZero = '' + this.props.menuItem.price + '0';
     }
 
+    if (this.props.menuItem.price.toString().length === 1) {
+      priceWithZero = '' + this.props.menuItem.price + '.00';
+    }
+
     let photoWord = 'photos';
     if (this.state.numberOfPhotos === 1) {
       photoWord = 'photo';
