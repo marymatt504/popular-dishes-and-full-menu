@@ -112,16 +112,20 @@ class PopularDish extends React.Component {
       reviewsWord = 'review';
     }
 
-    let priceWithZero = '' + dish.price;
+    let dishPrice = dish.price.toString();
+
     if (dish.price.toString().length === 3) {
-      priceWithZero = '' + dish.price + '0';
+      dishPrice = `${dish.price}0`;
+    }
+    if (dish.price.toString().length === 1) {
+      dishPrice = `${dish.price}.00`;
     }
 
     return (
       <MainDiv>
         <ImageWrapper>
           <Image src={this.state.imgurl} alt="picture of food"></Image>
-          <Price>{'$' + priceWithZero}</Price>
+          <Price>{'$' + dishPrice}</Price>
         </ImageWrapper>
         <DetailWrapper>
           <b>{dish.name[0].toUpperCase() + dish.name.slice(1)}</b>
