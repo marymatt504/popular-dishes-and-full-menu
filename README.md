@@ -2,6 +2,9 @@
 
 > Module displays carousel of top 10 most popular dishes for the given restaurant with image and stats like price and number of reviews from users that mention the dish. Clicking on the Full Menu displays the Full Menu of all dishes for the restaurant. 
 
+![populardishesandfullmenucarousel](https://user-images.githubusercontent.com/29344313/50660628-54bfbf00-0f55-11e9-8689-2bb5604affa7.png)
+![populardishesandfullmenumodal](https://user-images.githubusercontent.com/29344313/50660654-6d2fd980-0f55-11e9-9a6d-0d11aef2ed6e.png)
+
 See demo at https://youtu.be/E7p8BuHpOmo
 
 ## Related Projects
