@@ -18,13 +18,13 @@ app.get('/:restaurant_id', (req, res) => {
 
 app.get('/restaurants/:restaurant_id', (req, res) => {
   var id = req.params.restaurant_id;
-  // console.log('restaurantID form server>>', id);
+  console.log('restaurantID form server>>', id);
 
   db.getRestaurantName(id, (error, results) => {
     if (error) {
       res.status(500).send(error.message);
     } else {
-      // console.log('results from database>>>', results);
+      console.log('results from database>>>', results);
       res.status(200).send(results);
     }
   });

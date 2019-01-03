@@ -14,7 +14,7 @@ See demo at https://youtu.be/E7p8BuHpOmo
 2. [Requirements](#requirements)
 3. [Development](#development)
 
-## Setup
+## To Setup & Run Locally
  - npm install
  - npm run react-dev to run webpack
  - npm start to run server
@@ -25,7 +25,7 @@ See demo at https://youtu.be/E7p8BuHpOmo
  - if prefer to call App with restaurantName, can uncomment line 97 in App.jsx and pass down restaurantName as prop in index.jsx
 
 ## Requirements
-- Node 6.13.0 and additional requirements in package.json file -- to be installed with npm install 
+- Node 6.13.0 
 - mySql database 
 
 ### Installing Dependencies

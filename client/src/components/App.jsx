@@ -125,10 +125,16 @@ class App extends React.Component {
     // then use it to get restaurantName, then get data based on restaurantName
     const restaurantId = window.location.pathname.slice(1);
 
-    axios.get(`http://localhost:2000/restaurants/${restaurantId}`)
+    console.log(restaurantId);
+
+    // axios.get(`http://18.188.31.198/restaurants/${restaurantId}`)
+    axios.get(`/restaurants/${restaurantId}`)
       .then(data => {
+        console.log('restaurant name', data.data[0].name);
+
         this.setState({ restaurantName: data.data[0].name });
-        return axios.get(`http://localhost:2000/menus/${this.state.restaurantName}`)
+        // return axios.get(`http://18.188.31.198/menus/${this.state.restaurantName}`)
+        return axios.get(`/menus/${this.state.restaurantName}`)
           .then(data => {
             this.setState({ dishes: data.data });
             var top10 = this.getTop10(data.data);
@@ -235,7 +241,6 @@ class App extends React.Component {
 
       </MainContainer>
     );
-
   }
 }
 export default App;
