@@ -17,7 +17,7 @@ See demo at https://youtu.be/E7p8BuHpOmo
 2. [Requirements](#requirements)
 3. [Development](#development)
 
-## To Setup & Run Locally
+## To Set Up & Run Locally
  - npm install
  - npm run react-dev to run webpack
  - npm start to run server
